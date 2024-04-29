@@ -13,21 +13,21 @@ def main():
 
     #Add user input components
     #input one by one
-    CreditScore=st.number_input("CreditScore", 100, 1000)
-    Gender=st.radio("gender", ["Male","Female"])
-    Geography=st.radio("geographical location", ["France","Spain", "Germany", "Others"])
-    Age=st.number_input("age", 0, 100)
-    Tenure=st.number_input("tenure", 0,10)
-    Balance=st.number_input("balance", 0,1000000)
-    NumOfProducts=st.number_input("number of products", 1,5)
-    HasCrCard=st.number_input("have credit card? [0 for no, 1 for yes]", 0,1)
-    IsActiveMember=st.number_input("an active member? [0 for no, 1 for yes]", 0,1)
-    EstimatedSalary=st.number_input("salary", 0,1000000)
+    creditScore=st.number_input("CreditScore", 100, 1000)
+    gender=st.radio("gender", ["Male","Female"])
+    geography=st.radio("geographical location", ["France","Spain", "Germany", "Others"])
+    age=st.number_input("age", 0, 100)
+    tenure=st.number_input("tenure", 0,10)
+    balance=st.number_input("balance", 0,1000000)
+    numOfProducts=st.number_input("number of products", 1,5)
+    hasCrCard=st.number_input("have credit card? [0 for no, 1 for yes]", 0,1)
+    isActiveMember=st.number_input("an active member? [0 for no, 1 for yes]", 0,1)
+    estimatedSalary=st.number_input("salary", 0,1000000)
     
-    data = {'CreditScore': float(CreditScore), 'Gender': Gender, 'Geography': Geography,
-            'Age': int(Age), 'Tenure':int(Tenure), 'Balance': float(Balance), 
-            'NumOfProducts': int(NumOfProducts), 'HasCrCard': int(HasCrCard),
-            'IsActiveMember': int(IsActiveMember), 'EstimatedSalary': float(EstimatedSalary)}
+    data = {'CreditScore': float(creditScore), 'Gender': gender, 'Geography': geography,
+            'Age': int(age), 'Tenure':int(tenure), 'Balance': float(balance), 
+            'NumOfProducts': int(numOfProducts), 'HasCrCard': int(hasCrCard),
+            'IsActiveMember': int(isActiveMember), 'EstimatedSalary': float(estimatedSalary)}
     
     df=pd.DataFrame([list(data.values())], columns=['CreditScore', 'Gender', 'Geography',
                                                     'Age', 'Tenure', 'Balance', 'NumOfProducts',
